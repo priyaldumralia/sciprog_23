@@ -1,0 +1,9 @@
+These are the codes for Practical02
+To Compile:
+"Conversion.c File"
+>gcc -o Conversion Conversion.c -lm
+>./Conversion
+
+"Sum.c File"
+>gcc -o Sum Sum.c
+>./Sum
