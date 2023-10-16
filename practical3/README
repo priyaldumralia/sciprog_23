@@ -1,0 +1,5 @@
+THESE ARE THE CODES FOR PRACTICAL03
+TO COMPLIE:
+>gcc -o trap trap.c
+>./trap
+
