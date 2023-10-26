@@ -1,0 +1,4 @@
+These are the code for practical04
+To Compile:
+>gcc -o trap_deg trap_deg.c
+>./trap_deg
