@@ -1,0 +1,17 @@
+These are the codes for Practical07
+
+for question1 the code is in the file finde.c 
+To compile the file finde.c 
+>>gcc finde.c -o finde -lm 
+>>./finde
+
+
+///////COMMENT ON THE HIGHER ORDER POLYNOMIALS ESTIMATES FETTING WORSE.////
+The issue with higher-order polynomials ariese from the chracteristics of Taylor series expansiion for the exponential function e^x. As more terms are incorporated, the series converges at a slower rate, especially when dealing with the larger values of x.
+In our case when we use polynomial f(x) to estimate e with x=1, we are calculating the taylor series expansion for e^1.
+While the series exhibits satisfactory convergence for small x, augmenting the polynomial's order results in diminishing results. The terms x^n/n! becomes exceedingly smaller for larger n, causing the impact on higher order terms to wane rapidly. As a result, the estimation converges to a limit, and further escalation of the order does not significantly enhance accuracy.
+
+For question2 the code is in the file dynamicalllocation.c 
+To compile the file dynamicalloaction.c
+>>gcc dynamicallocation.c -o dynamicallocation 
+>>./dynamicallocation
