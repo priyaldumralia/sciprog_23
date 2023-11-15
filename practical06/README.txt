@@ -13,4 +13,4 @@ To compile the two files first create the object file of each file and then crea
 >./matmulc
 
 For step 7 we have craeted a Makefile.txt in Ccodes folder to create executable files using just one command 
->makes
+>make
