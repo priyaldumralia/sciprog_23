@@ -1,26 +1,27 @@
-//magic_square.h
 
 #include<stdio.h>
 
-int isMagicSqaure(int **, const int){
-    int i, j;
+int isMagicSquare(int ** square, const int n){
+    
     //Eliminating the case where 'n' is negative
     if(n<0){
         return 0;
     }
     //M is tthe sum oof every row, column and the main and secondary diagonals.
-    int M=(n*(n*n+1))/2;
+    int M = (n*(n*n+1))/2;
     printf("M=%d\n", M);
+
+    int i,j;
     //TODO: Checking that every row and column add up to M
     for(i=0;i<n;i++){
         int rowSum=0;
         int colSum=0;
         for(j=0;j<n;j++){
-            rowSum += sqaure[i][j];
-            colSum +=square[i][j];
+            rowSum += square[i][j];
+            colSum +=square[j][i];
         }
         printf("i=%d, rowSum=%d, colSum=%d\n",i,rowSum,colSum);
-        if(rowSum !=M || colSum=M ){
+        if(rowSum !=M || colSum !=M ){
             return 0;
         }
     }
@@ -28,8 +29,8 @@ int isMagicSqaure(int **, const int){
     int diagSum=0;
     int secDiagSum=0;
     for(i=0;i<n;i++){
-        diagSum += sqaure[i][i];
-        secDiagSum += sqaure[i][n-i-1];
+        diagSum += square[i][i];
+        secDiagSum += square[i][n-i-1];
     }
     printf("diagSum=%d, SecDiagSum=%d", diagSum,secDiagSum);
     if(diagSum != M || secDiagSum !=0){

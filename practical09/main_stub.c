@@ -21,7 +21,7 @@ int main(){
     f=fopen(filename,"r");
     if(f== NULL){
         printf("Cannot open the file!!\n");
-        exit()
+        exit(1);
     }
 
 
@@ -37,17 +37,17 @@ int main(){
     int j;
     for(i=0;i<n;i++){
         for(j=0;j<n;j++){
-            fscanf(f, "%d", &magicSqaure[i][j]);
-            printf("%d\t", magicSqaure[i][j]);
+            fscanf(f, "%d", &magicSquare[i][j]);
+            printf("%d\t", magicSquare[i][j]);
         }
         printf("\n");
     }
-    printf("This Sqaure %s magic\n"; ismagicSquare(magicSqaure,n)? "is":"is not");
+    printf("This Sqaure %s magic\n", isMagicSquare(magicSquare,n)? "is":"is not");
     // TODO: Freeing each row separately before freeing the array of pointers
-    for(i=0;i<n;i<n){
-        free(magicSqaure[i]);
+    for(i=0;i<n;i++){
+        free(magicSquare[i]);
     }
-    free(magicSuare);
+    free(magicSquare);
     // TODO:Close the file
     fclose(f);
 
